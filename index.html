@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mapping with Python</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="navigation">
+		<ul>
+			<li class="active"><a href="#Casey">Home</a></li>
+			<li><a href="#course">Philosophy</a></li>
+			<li><a href="#course">Custom Milling</a></li>
+			<li><a href="#hire-me">Blog</a></li>
+		</ul>
+	</div>
+
+	<h1>Mapping with Python</h1>
+	<img src="images\SouthAmericaCropped.png">
+	<p>This page outlines the pythonic solution I developed when I had to make several maps of the same spatial domain but with different data. I typically use QGIS and GRASS GIS but the process to output a final map is slow and tedious when producing 50 maps. With what we cover here, the same task can be completed in moments.</p>
+
+	<ol>
+		<li>Environment</li><br>
+		<p>The first thing to address is the environment. I like to use Anaconda which makes this task quite straightforward. To create a new environment, navigate to where you want your project to "live". Then open a command prompt (I prefer <a href="https://cmder.net/">cmder</a>) and enter...</p>
+
+		<p class="cmd">conda create --name <i>YourEnvironmentName</i> python=3.6</p>
+	
+		<p>This will usually take a little while to complete and it may ask if you would like to proceed. Enter 'y' to indicate you would like to proceed and once it has finished, you can activate the environment.</p>
+
+		<p class="cmd">activate <i>YourEnvironmentName</i></p>
+		
+		<p>This should activate your environment. You can tell because the cursor should have <i>YourEnvironmentName</i> in front of it. Note that sometimes you have to (or you can) use <p class="cmd">conda activate <i>YourEnvironmentName</i></p> 
+		</p>
+	</ol>
+
+</body>
+</html>

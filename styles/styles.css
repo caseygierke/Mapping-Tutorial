@@ -14,8 +14,14 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 400px;
+    /*height: 400px;*/
     padding-top: 10px;
+}
+
+.files {
+    object-fit: cover;
+    /*margin-top: -200 !important;*/
+    clip:rect(0px,115px,115px,0px);
 }
 
 p, ol {
@@ -105,3 +111,4 @@ h2 {
 .my-photo {
   background-image: url(../images/treesource Bannor.JPG)
 }
+

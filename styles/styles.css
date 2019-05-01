@@ -18,9 +18,15 @@ img {
     padding-top: 10px;
 }
 
+/*Crop image of file structure*/
 .files {
     object-fit: cover;
-    /*margin-top: -200 !important;*/
+    clip:rect(0px,115px,115px,0px);
+}
+
+/*Crop results images to cut out whitespace*/
+.results {
+    object-fit: cover;
     clip:rect(0px,115px,115px,0px);
 }
 
@@ -33,6 +39,25 @@ p, ol {
 
 li {
     font-size: 50;
+}
+
+.results-container {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  flex-direction: row;
+}
+
+.flex-box-container {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.results-container img {
+    height: 400px;
 }
 
 .cmd {
@@ -50,7 +75,6 @@ li {
     background-size: 900px 200px;
     margin: auto;
     text-align: center;
-
 }
 
 .our-content {

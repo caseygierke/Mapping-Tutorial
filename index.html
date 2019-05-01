@@ -62,7 +62,9 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return last_pos <br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last_pos = pos</p>
 
-			<p>This is a pretty simple function that I mainly use to navigate the path variable. I will usually call the relative path to my script and then, because I use a convention of keeping my Python files in a \Python folder for projects, I need to get out of that folder in my path to access other files. Hopefully that makes more sense for you shortly. Next is something that I mostly use for legends. If you just want to bang out maps and don't care about legends, don't worry about this.</p>
+			<p>This is a pretty simple function that I mainly use to navigate the path variable. I will usually call the relative path to my script and then, because I use a convention of keeping my Python files in a \Python folder for projects, I need to get out of that folder in my path to access other files. Hopefully that makes more sense for you shortly.</p> 
+
+			<!-- <p>Next is something that I mostly use for legends. If you just want to bang out maps and don't care about legends, don't worry about this.</p>
 
 			<p class="cmd">def drawRect(x1,y1,x,y, color, width):<br>
 			&nbsp;&nbsp;&nbsp;poly = Polygon([[x1,y1], [x1+x,y1], [x1+x,y1+y], [x1,y1+y]], facecolor='w', edgecolor=color, linewidth=width)<br>
@@ -179,7 +181,6 @@
 			<p>First off, I extend the Basemap module/class* with some added functionality so that my maps have legends.</p>
 			<p class="cmd">class Basemap2(Basemap):</p>
 
-			<p>First off, I extend the Basemap module/class* with some added functionality so that my maps have legends.</p>
 			<p class="cmd">
 &nbsp;&nbsp;&nbsp;def drawscale(self,length, yoffset=None): <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"""draw a simple map scale from x1,y to x2,y in map projection  <br>
@@ -294,15 +295,23 @@
 		verticalalignment='center', horizontalalignment='center', fontname='Times New Roman', fontsize=12, color= 'k', fontweight='heavy')  <br>
 				</p>
 
-				<p>Again, this is fairly simple plotting stuff so I will not go into it too deep. This is what I consider to be an eloquent looking north arrow but feel free to use whatever you would like. That concludes our functions so we are ready to get to the mapping!</p>
+				<p>Again, this is fairly simple plotting stuff so I will not go into it too deep. This is what I consider to be an eloquent looking north arrow but feel free to use whatever you would like. That concludes our functions so we are ready to get to the mapping!</p> -->
 			
 			<li>File Structure</li><br>
 
-				<p>Now for the good stuff. Sorry there was so much setup but it will make the rest go pretty quickly. I like to write scripts that run in any place and create their own folders if needed. For that, we have to do some work with path and make sure that your file structure is correct. The image below shows how your should set up your file structure. The .py file should obviously go in the Python folder. 
-				Download this <a href="">static</a> file and move it into the Static Files folder. These are the files that will be the same on each map. 
-				Then download these <a href="">dynamic</a> data files and move them in the Data folder.</p>
+				<p>I like to write scripts that run in any place and create their own folders if needed. For that, we have to do some work with the path and make sure that your file structure is correct. The image below shows how you should set up your file structure.</p>
 
 				<img class="files" src="images\FilesStart.png" alt="FilesStart" height="100", width="300">				
+				
+				<p>The .py file should go in the Python folder. 
+				Download this static file of the <a href="https://gstore.unm.edu/apps/rgis/datasets/c37345ec-6732-43ef-a609-35aa48e9333e/new_mexico_bnd.derived.shp">New Mexico border</a> and move it into the Static Files folder. This is the file that will be the same on each map. 
+				Then download these dynamic data files (
+					<a href="https://gstore.unm.edu/apps/rgis/datasets/e391ca51-7501-4e94-80c7-6274152decfc/nm_cty_2000.derived.shp">File 1</a>, 
+					<a href="https://gstore.unm.edu/apps/rgis/datasets/8838d30f-40c6-428a-86c7-81291ad84909/NMStateParks.derived.shp">NM State Parks</a>, 
+					<a href="https://gstore.unm.edu/apps/rgis/datasets/ddbe4f85-6b3b-4081-a53a-0f93f3a51af7/NLCS_Wilderness_Areas_2018.derived.shp">BLM Wilderness Study Areas</a>, 
+					<a href="https://gstore.unm.edu/apps/rgis/datasets/bd489bb4-7d12-4f66-975a-217ae24cc952/land_grants.derived.shp">Land Grants</a>, 
+					<a href="https://gstore.unm.edu/apps/rgis/datasets/b63a52b7-5d14-4f4d-89b4-13cf96609d4f/tl_2015_us_aiannh.derived.shp">American Indian Lands</a>
+				) and move them to the Data folder. The proper file structure is shown below.</p>
 
 				<p>With that said, let's jump right into the code.</p>
 
@@ -323,8 +332,6 @@ for file in glob.glob(path+os.sep+'Data'+os.sep+'*.shp'): <br>
 					>>>Files<br>['C:\\Tools\\Basemap Mapper'\\*.shp', <br>'C:\\Tools\\Basemap Mapper'\\*.shp', <br>'C:\\Tools\\Basemap Mapper'\\*.shp']</p>
 
 				<p>It's unlikely that your file name will print out so cleanly but you should have *3 files. You can check the length to be sure. That should have us ready to start the actual mapping now!</p>
-
-
 
 			<li>Mapping</li><br>
 	</ol>
